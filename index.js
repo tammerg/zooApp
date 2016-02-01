@@ -1,14 +1,14 @@
 var zoo = {
   welcome: function (){
     console.log("welcome to the zoo and friends app~")
-  }
+  };
   menu: function (){
     console.log("Enter (A): ------> to Add a new animal to the Zoo!");
     console.log("Enter (U): ------> to Update info on an animal in the Zoo!");
     console.log("Enter (V): ------> to Visit the animals in the Zoo!");
     console.log("Enter (D): ------> to Adopt an animal from the Zoo!");
     console.log("Enter (Q): ------> to Quit and exit the Zoo!");
-  }
+  };
 }
 var prompt = require ('prompt');
 var mysql = require ('mysql');
