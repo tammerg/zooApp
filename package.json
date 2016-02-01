@@ -1,0 +1,24 @@
+{
+  "name": "zooapp",
+  "version": "1.0.0",
+  "description": "A zoo app utilizing Javascript, Node.js, MySQL, and npm packages.",
+  "main": "index.js",
+  "dependencies": {
+    "mysql": "^2.10.2",
+    "prompt": "^0.2.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tammerg/zooApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tammerg/zooApp/issues"
+  },
+  "homepage": "https://github.com/tammerg/zooApp#readme"
+}
