@@ -9,7 +9,6 @@ var connection = mysql.createConnection({
 //prompt
 var prompt = require('prompt');
 prompt.start();
-
 var zoo = {
   welcome : function (){
     console.log("welcome to the zoo and friends app~");
@@ -135,6 +134,27 @@ var zoo = {
         self.menu();
       }
     });
+  },
+  promptUser : function(){
+    var self = this;
+    prompt.get("input", function(err, result){
+      if(result.input == "Q"){
+        self.exit();
+      }
+      else if(result.input == "A"){
+        self.add(self);
+      }
+      else if(result.input == "V"){
+        self.visit();
+        self.view(self);
+      }
+      else if(result.input == "D"){
+        self.adopt(self);
+      }
+      else{
+        console.log("Sorry, didn't get that.  Come again?")
+      }
+    })
   },
   exit : function(){
     console.log("Thank you for visiting Tammer's Zoo of Horrors, Bye!");
