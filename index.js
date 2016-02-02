@@ -3,7 +3,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'tinker511',
+  password : '',
   database : 'zoo_db'
 });
 //prompt
