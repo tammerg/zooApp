@@ -57,7 +57,7 @@ var zoo = {
           zoo.animId();
         }
         else if (result.visit === "N") {
-          zoo.name();
+          zoo.anim_name();
         }
         else if (result.visit === "A") {
           zoo.all();
