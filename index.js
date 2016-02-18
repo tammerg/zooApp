@@ -24,7 +24,7 @@ var zoo = {
     var currentScope = input_scope;
     var query = "INSERT INTO zoo_db(name, type, age) VALUES (?,?,?)";
     console.log("To add an animal to the zoo please fill out the following form for us!");
-    prompt.get(["->", "name", "type", "age"], function(err, result) {
+    prompt.get(["name", "type", "age"], function(err, result) {
       connection.query(query);
     });
     currentScope.menu();
@@ -43,7 +43,7 @@ var zoo = {
   view: function(input_scope) {
     var currentScope = input_scope;
     console.log("Please choose where you would like to visit");
-    prompt.get(["->", "visit"], function(err, result) {
+    prompt.get(["visit"], function(err, result) {
       if (result.visit == "Q") {
         currentScope.menu();
       } else if (result.visit == "O") {
@@ -66,16 +66,16 @@ var zoo = {
   type: function(input_scope) {
     var currentScope = input_scope;
     console.log("Enter an animal to see how many we have!");
-    prompt.get(["->", "animal_type"], function(err, result) {
+    prompt.get(["animal_type"], function(err, result) {
       connection.query();
       currentScope.menu();
-      currentScope.prompUser();
+      currentScope.();
     });
   },
   care: function(input_scope) {
     var currentScope = input_scope;
     console.log("Enter City Name: NY/SF");
-    prompt.get(["->", "city_name"], function(err, result) {
+    prompt.get(["city_name"], function(err, result) {
       connection.query();
       currentScope.visit();
       currentScope.view(currentScope);
@@ -84,16 +84,16 @@ var zoo = {
   animId: function(input_scope) {
     var currentScope = input_scope;
     console.log("Enter ID of the animal you wish to visit");
-    prompt.get(["->", "animal_id"], function(err, result) {
+    prompt.get(["animal_id"], function(err, result) {
       connection.query();
       currentScope.menu();
-      currentScope.promptUser();
+      currentScope.();
     });
   },
   anim_name: function(input_scope) {
     var currentScope = input_scope;
     console.log("Enter the Name of the animal you wish to visit");
-    prompt.get(["->", "animal_name"], function(err, result) {
+    prompt.get(["animal_name"], function(err, result) {
       connection.query();
       currentScope.menu();
       currentScope.promptUser();
@@ -102,7 +102,7 @@ var zoo = {
   count: function(input_scope) {
     var currentScope = input_scope;
     console.log("Type all to see the current total count of animals in our zoo!");
-    prompt.get(["->", "animal_count"], function(err, result) {
+    prompt.get(["animal_count"], function(err, result) {
       connection.query();
       currentScope.menu();
       currentScope.prompUser();
@@ -125,15 +125,15 @@ var zoo = {
   },
   update: function(input_scope) {
     var currentScope = input_scope;
-    prompt.get(["--->", "new_name", "new_age", "new_type", "new_caretaker_id"], function(err, result) {
+    prompt.get(["new_name", "new_age", "new_type", "new_caretaker_id"], function(err, result) {
       connection.query();
       currentScope.menu();
-      currentScope.prompUser();
+      currentScope.promptUser();
     });
   },
   adopt: function() {
     var currentScope = input_scope;
-    prompt.get(["->", "animal_id"], function(err, result) {
+    prompt.get(["animal_id"], function(err, result) {
       if (result.input == "Q") {
         self.exit();
       } else if (result.input == "A") {
