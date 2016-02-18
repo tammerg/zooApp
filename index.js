@@ -69,7 +69,6 @@ var zoo = {
     prompt.get(["animal_type"], function(err, result) {
       connection.query();
       currentScope.menu();
-      currentScope.();
     });
   },
   care: function(input_scope) {
@@ -87,7 +86,6 @@ var zoo = {
     prompt.get(["animal_id"], function(err, result) {
       connection.query();
       currentScope.menu();
-      currentScope.();
     });
   },
   anim_name: function(input_scope) {
